@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta charset="UTF-8">
+
+    <title>Hangman game</title>
+    <script src="../javascript/testhangman1.js"></script> 
+    <link href="../styles/testhangman1.css" rel="stylesheet" type="text/css">
+    <link href="../styles/haf.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../assets/icons/fontawesome-free-5.11.2-web/fontawesome-free-5.11.2-web/css/all.css">                <meta name=".." content=" " /> 
+
+    <meta name="hangman" content=" " /> 
+  </head>
+
+  <body id="hangman">
+
+        <header>
+                <div class='right'>
+                     <img class="logo" src="../assets/images/bestof-logo.png" alt="bestof-logo" />
+                </div>
+                <div class="header-nav col-m-8 col-l-8 col-xl-8">
+                    <div class="header-nav-link"><a href="../index.html"><i class="fas fa-list-alt padding-right-4"></i>Categories</a></div>
+                    <div class="header-nav-link"><a href="1.html"><i class="fas fa-gamepad padding-right-4"></i>Games</a></div>
+                    <div class="header-nav-link"><a href="login.html"><i class="fas fa-user padding-right-4"></i>Login</a></div>
+                </div>
+        </header>   
+
+    <div class="hangman">
+        <script>
+            window.onload=hide;
+        </script>
+        <div id="twoButtons">
+            <button id="startButton" TYPE="button" ONCLICK="show(),isGameOver(),start()">START</button>
+            <button id="restartButton" TYPE="button" ONCLICK="window.location.href = 'testhangman1.html';">RETRY</button>
+        </div>
+        
+        <div id="wrapper_hangman">  
+          <button class="letterButton" TYPE="button" ONCLICK="guess('A'),isGameOver()">A</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('B'),isGameOver()">B</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('C'),isGameOver()">C</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('D'),isGameOver()">D</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('E'),isGameOver()">E</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('F'),isGameOver()">F</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('G'),isGameOver()">G</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('H'),isGameOver()">H</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('I'),isGameOver()">I</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('J'),isGameOver()">J</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('K'),isGameOver()">K</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('L'),isGameOver()">L</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('M'),isGameOver()">M</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('N'),isGameOver()">N</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('O'),isGameOver()">O</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('P'),isGameOver()">P</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('Q'),isGameOver()">Q</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('R'),isGameOver()">R</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('S'),isGameOver()">S</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('T'),isGameOver()">T</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('U'),isGameOver()">U</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('V'),isGameOver()">V</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('W'),isGameOver()">W</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('X'),isGameOver()">X</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('Y'),isGameOver()">Y</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('Z'),isGameOver()">Z</button>
+        </div>
+            
+        <div id="gameBody">
+          
+            <p id="line1"></p>
+            <p id="line2"></p>
+            <p id="number"></p>
+            <p id="returnGuess"></p>
+            <p id="showGuessedWord"></p>
+            <p id="result_hangman"></p>
+        </div>
+        
+        <canvas id="canvas_hangman" width="300" height="350"></canvas>
+        <p id="pic"></p>
+        </div>
+             
+    </div>
+
+    <footer>
+                <div class="footer-header">
+                    BESTOF</div>
+                <div class="footer-content" style="font-style:italic">
+                    <div class="footer-terms col-l-2 col-xl-2">
+                        <div>Categories</div>
+                        <div>Gallery</div>
+                        <div>News</div>
+                        <div>Deals</div>
+                        <div>Games</div>
+                    </div>
+                    <hr class="footer-line-margin-5 hide" />
+                    <div class="footer-terms col-l-2 col-xl-2">
+                        <div>Restaurants</div>
+                        <div>Moiles</div>
+                        <div>Laptops</div>
+                        <div>Cities</div>
+                        <div>Movies</div>
+                    </div>
+                    <hr class="footer-line-margin-5 hide" />
+                    <div class="footer-social col-l-2 col-xl-2">
+                        <span class="font-14">FOLLOW US</span>
+                        <br />
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-google"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <hr class="footer-line-margin-5 hide" />
+                    <div class="footer-sign-up col-l-2 col-xl-2">
+                        <span class="sign-up">Sign Up</span><br />
+                        <span class="sign-up-text font-14">Sign Up here to comment,<br /> rate an item and explore more about
+                            the site</span>
+                    </div>
+                </div>
+                <div class="site-contact">
+                    <div>&copy; Copyright 2019 BestOf</div>
+                    <div>About Us | Privary Policy | Contact Us | Terms and Conditions</div>
+                </div>
+            </footer>
+
+  </body>
+</html>

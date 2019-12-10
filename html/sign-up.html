@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SignUp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/icons/fontawesome-free-5.11.2-web/fontawesome-free-5.11.2-web/css/all.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+</head>
+
+<body>
+    <header>
+        <div class="header-image col-m-4 col-l-4 col-xl-4">
+            <div>
+                <img class="logo" src="../assets/images/bestof-logo.png" alt="bestof-logo" />
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-content">
+            <h1>Create an account</h1>
+            <br />
+            <div class="col-m-12 col-l-12 col-xl-12">
+                <form>
+                    <div class="col-m-6 col-l-5 col-xl-4 float-left">
+                        <label>First Name</label>
+                        <input type="text" class="form-field" id="first-name" />
+                        <label id="error-firstname-message"></label>
+                        </br>
+                        <label>Last Name</label>
+                        <input type="text" class="form-field" id="last-name" />
+                        <label id="error-lastname-message"></label>
+                        </br>
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-field" id="phone-number" />
+                        <label id="error-phone-number-message"></label>
+                        </br>
+                    </div>
+                    <div class="col-m-6 col-l-5 col-xl-4 float-left">
+                        <label>Email Address</label>
+                        <input type="email" class="form-field" id="email" />
+                        <label id="error-sign-up-email-message"></label>
+                        </br>
+                        <label>Password</label>
+                        <input type="password" class="form-field" id="password" />
+                        <label id="error-sign-up-password-message"></label>
+                        </br>
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-field" id="confirm-password" />
+                        <label id="error-confirm-password-message"></label>
+                        </br>
+                    </div>
+                </form>
+            </div>
+            </br>
+            <div class="clear-both">
+                <div class="col-m-6 col-l-5 col-xl-4">
+                    <button class="sign-in-button" onclick="signUp()">Sign Up</button>
+                </div>
+                <p>Already have an account ?</p>
+                <p class="login-signup"><a href="login.html">Sign In ></a></p>
+            </div>
+        </div>
+    </main>
+    <script src="../assets/jquery-3.4.1.js"></script>
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/sign-up.js"></script>
+    <script src="../javascript/data.js"></script>
+</body>
+
+</html>

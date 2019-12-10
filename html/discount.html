@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BestOf</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="styles/main.css" rel="stylesheet" /> -->
+    <link href="styles/responsive.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/icons/fontawesome-free-5.11.2-web/fontawesome-free-5.11.2-web/css/all.css">
+    <script type = "javascript" src= "data/restaurants.json"></script>
+    <script src="assets/jquery-3.4.1.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/data.js"></script>
+	<script type="text/javascript"src="http://dl.1learn.ir/admin/1learn/1learn.js"></script>
+<link href='http://www.font-api.ir/css/B Yekan={font-api.ir}.css' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://dl.1learn.ir/admin/posts/contentoverly/jquery.min_2.js"></script>
+  
+<script type="text/javascript">
+jQuery.noConflict();
+  
+jQuery.extend(jQuery.easing, {easeOutExpo:function (x, t, b, c, d) { 
+        return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+    }
+});
+  
+(function($){
+  $.fn.overlaycontent=function(options) {  
+    var setting={id:'', dir:'up', speed:200, opacity:1}
+    return this.each(function(){
+      $.extend(setting, options, (this.getAttribute('data-overlayid'))? {id:this.getAttribute('data-overlayid')} : {})
+            var $target=$(this).css({position:'relative', overflow:'hidden'})
+            var $overlay=$('#'+(setting.id)) 
+            var startpoint={}
+            if (setting.dir=="up" || setting.dir=="down"){
+                startpoint={top:$target.outerHeight()* (setting.dir=="down"? -1 : 1)}
+            }
+            else{
+                startpoint={left:$target.outerWidth()* (setting.dir=="right"? -1 : 1)}
+            }
+            var overlaydimenions={w:$target.outerWidth()-($overlay.outerWidth()-$overlay.width()), h:$target.outerHeight()-($overlay.outerHeight()-$overlay.height())}
+            $overlay.css($.extend({position:'absolute', zIndex:'1000', width:overlaydimenions.w, height:overlaydimenions.h, left:0, top:0, visibility:'visible'}, startpoint)).appendTo($target)
+            if (setting.opacity<1)
+                $overlay.css({opacity:setting.opacity})
+            $target.hover(
+                function(){
+                    $overlay.dequeue().animate((setting.dir=="up" || setting.dir=="down")? {top:0} : {left:0}, setting.speed, 'easeOutExpo')
+                },
+                function(){
+                    $overlay.dequeue().animate(startpoint, setting.speed)
+                }
+            ) 
+      })
+  }
+})(jQuery);
+</script>
+  
+<script>
+jQuery(function($){ 
+    $('#info').overlaycontent({ 
+        speed:500,
+        dir:'up'
+    })
+  
+    $('div.imagecontainers').overlaycontent({ 
+        speed:300,
+        dir:'right',
+        opacity:0.8 
+    })
+})
+</script>
+  
+<style type="text/css">
+div#img-info{
+background:white;
+padding:40px;
+}
+</style>
+    
+</head>
+
+
+<body>
+    <header>
+        <div class="header-image col-m-4 col-l-4 col-xl-4">
+            <div class="header-nav-toggle">
+                <i class="fas fa-sliders-h switch-toggle" onclick="toggleNav()"></i>
+            </div>
+            <div>
+                <img class="logo" src="assets/images/bestof-logo.png" alt="bestof-logo" onclick=""/>
+            </div>
+        </div>
+        <div class="header-nav col-m-8 col-l-8 col-xl-8">
+            <div class="header-nav-link"><a href=""><i class="fab fa-hotjar padding-right-4"></i>Trending</a></div>
+            <div class="header-nav-link"><a href=""><i class="fas fa-list-alt padding-right-4"></i>Categories</a></div>
+            <div class="header-nav-link"><a href=""><i class="fas fa-user padding-right-4"></i>Login</a></div>
+        </div>
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a><i class="fas fa-home padding-right-5"></i>Home</a></li>
+            <li><a><i class="fas fa-list-alt padding-right-5"></i>Categories</a></li>
+		
+            <ul class="sub-nav">
+                <li><a href="index1.html"><i class="fas fa-utensils padding-right-5"></i>Restaurants</a></li>
+                <li><a><i class="fas fa-mobile-alt padding-right-5"></i>Phones</a></li>
+                <li><a><i class="fas fa-code padding-right-5"></i>Programming Languages</a></li>
+                <li><a><i class="fas fa-rocket padding-right-5"></i>Softwares</a></li>
+                <li><a><i class="fas fa-laptop padding-right-5"></i>Laptops</a></li>
+                <li><a><i class="far fa-building padding-right-5"></i>Companies</a></li>
+                <li><a><i class="fas fa-copyright padding-right-5"></i>Brands</a></li>
+            </ul>
+            <li><a><i class="far fa-newspaper padding-right-5"></i>News</a></li>
+            <li><a><i class="fab fa-wpforms padding-right-5"></i>Forums</a></li>
+            <li><a href="Deals"><i class="fas fa-hand-holding-usd padding-right-5"></i>Deals</a></li>
+			<ul class="sub-nav">
+				<li><a href="Top Deals"><i class="fas fa-copyright padding-right-5"></i>Top Deals</a></li>
+			</ul>
+			<li><a><i class="fab fa-wpforms padding-right-5"></i>Events</a></li>
+				
+        </ul>
+    </nav>
+
+    <main>
+        <div id="overlay" onclick="overlayOff()"></div>
+
+        <div class="breadcrumb">
+            <span><a>Deals</a></span>
+        </div>
+
+        <div class = "container-header">
+            <h2>Popular Discount Categories&nbsp;</h2>
+        </div>
+
+        <div class="container">
+            <div class="item">
+                <img src="assets/images/auto/car.jpg" slt="Auto top one" />
+                <span class="text-bold">
+                    <a href="https://www.consumerreports.org/new-cars/best-new-car-deals/">Auto </a>
+                </span>
+                <span class="text-light">&nbsp;</span>
+            </div>
+            <div class="item">
+                <img src="assets/images/mobiles/cc.jpg" slt="Cell phone top two" />
+                <span class="text-bold">
+                    <a href="https://www.whistleout.ca/CellPhones/Guides/best-cell-phone-plans">Cell Phones&nbsp; </a>
+                </span>
+                <span class="text-light">&nbsp;</span>
+            </div>
+            <div class="item">
+                <img src="assets/images/food/ff.jpg" slt="asador top three" />
+                <span class="text-bold">
+                    <a href="https://redflagdeals.com"> &nbsp; Foods</a>
+                </span>
+            </div>
+           
+           
+          
+           
+            <div class="item"> <span class="text-bold">
+                    
+            </span>
+               
+            </div>
+           
+            <div class="item"> <span class="text-bold">
+               
+            </span>
+                
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2019 BestOf</p>
+    </footer>
+
+</body>

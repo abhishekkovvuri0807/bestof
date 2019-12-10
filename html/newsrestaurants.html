@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Restaurants</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link href="../styles/newsrestaurants.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/icons/fontawesome-free-5.11.2-web/fontawesome-free-5.11.2-web/css/all.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="../assets/jquery-3.4.1.js"></script>
+    <script src="../javascript/main.js"></script>
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-image col-m-4 col-l-4 col-xl-4">
+            <div class="header-nav-toggle">
+                <i class="fas fa-sliders-h switch-toggle" onclick="toggleNav()"></i>
+            </div>
+            <div>
+                <img class="logo" src="../assets/images/bestof-logo.png" alt="bestof-logo" />
+            </div>
+        </div>
+        <div class="header-nav col-m-8 col-l-8 col-xl-8">
+            <div class="header-nav-link"><a href="../index.html"><i
+                        class="fas fa-list-alt padding-right-4"></i>Categories</a></div>
+            <div class="header-nav-link"><a href="1.html"><i class="fas fa-gamepad padding-right-4"></i>Games</a>
+            </div>
+            <div class="header-nav-link"><a href="login.html"><i class="fas fa-user padding-right-4"></i><span
+                        class="user-name">Login</span></a></div>
+        </div>
+    </header>
+
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-list-alt padding-right-8"></i>Categories</a></li>
+            <ul id="sub-nav">
+                <li><a href="items.html?categoryId=1"><i class="fas fa-utensils padding-right-8"></i>Restaurants</a>
+                </li>
+                <li><a href="items.html?categoryId=2"><i class="fas fa-mobile-alt padding-right-8"></i>Mobiles</a></li>
+                <li><a href="items.html?categoryId=3"><i class="fas fa-building padding-right-8"></i>IT Companies</a>
+                </li>
+                <li><a href="items.html?categoryId=4"><i class="fas fa-city padding-right-8"></i>Cities</a></li>
+                <li><a href="items.html?categoryId=5"><i class="fas fa-place-of-worship padding-right-8"></i>Tourist
+                        Places</a></li>
+                <li><a href="items.html?categoryId=6"><i class="fas fa-university padding-right-8"></i>Universities</a>
+                </li>
+                <li><a href="items.html?categoryId=7"><i class="fas fa-car padding-right-8"></i>Cars</a>
+                <li><a href="items.html?categoryId=8"><i class="fas fa-film padding-right-8"></i>Movies</a></li>
+                <li><a href="items.html?categoryId=9"><i class="fas fa-laptop padding-right-8"></i>Laptops</a></li>
+                <li><a href="items.html?categoryId=10"><i class="fas fa-gamepad padding-right-8"></i>Games</a></li>
+            </ul>
+            <li><a href="./newsmain.html"><i class="far fa-newspaper padding-right-8"></i>News</a></li>
+            <li><a href="./1.html"><i class="fas fa-gamepad padding-right-8"></i>Games</a></li>
+            <li><a href="./dealsmain.html"><i class="fas fa-hand-holding-usd padding-right-8"></i>Deals</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <div id="overlay" onclick="overlayOff()"></div>
+
+        <div class="content">
+            <div class="container-header">
+                <h1>Restaurants</h1>
+                <h3>List of upcoming restaurants:</h3>
+            </div>
+
+
+            <div class="restaurant-container">
+                <div class="rs1">
+                    <div class="rs1img" data-aos="fade-right"><img src="../assets/images/news/diff.jpg"></div>
+                    <div class="rs1info" data-aos="fade-left">
+                        <h3>Kōjin</h3>
+                        <p>
+                            What sets Kōjin apart from—and far above—the competition is what isn’t on the menu: a
+                            dizzying selection of steaks. At some point, steak houses entered into a bovine arms race,
+                            competing to have the most esoteric and pricy cuts of Wagyu from around the
+                            world. Navarrete offers three superb options: a rib-eye, a strip loin and a butcher’s
+                            steak—plus a few nightly off-menu cuts—all from Ontario Hereford-Angus cattle. </p>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="rs2">
+                <div class="rs2info" data-aos="fade-right">
+                    <h3>Donna's</h3>
+                    <p>
+                        Donna’s elevates simplicity, a licensed, all-day snack bar serving dishes like soups, sandwiches
+                        and salads.The space formerly home to Hello Darling hasn’t changed much, a wooden banquette
+                        still lining one wall, the kitchen still open.Cilantro, mint,
+                        and a dressing of olive oil, lime juice and house fermented chilies is responsible in large part
+                        for the Asian feel of the salad, bringing a bit of heat.</p>
+                    </p>
+                </div>
+                <div class="rs2img" data-aos="fade-left"><img src="../assets/images/news/donna.jpg"></div>
+            </div>
+            <div class="rs3">
+                <div class="rs3img" data-aos="fade-right"><img src="../assets/images/news/alobar.jpg"></div>
+                <div class="rs3info" data-aos="fade-left">
+                    <h3>Alobar</h3>
+                    <p>Patrick Kriss could run a hot dog stand and it would make best restaurant lists. Tables at his
+                        Alo mother ship are only marginally harder to come by than at Aloette, his take on a diner (if a
+                        diner served sea urchin toast and beef
+                        carpaccio), and the announcement that he was opening a location in Yorkville was practically met
+                        with a tickertape parade.</p>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="rs4">
+            <div class="rs4info" data-aos="fade-right">
+                <h3>Yukashi</h3>
+                <p>The quieter the restaurant, the more serious the sushi chef. By that standard, Daisuke Izutsu is a
+                    pro: no one sitting at the bar, watching him at work, makes more than a peep. At first, I wondered
+                    if Yukashi was a theme restaurant with
+                    a vow of silence, but then I, too, grew mesmerized by Izutsu’s bubble of concentration and the
+                    surgical precision of his knife work. Izutsu has been quietly influencing our appreciation of
+                    Japanese food for years: he opened Kaiseki
+                    Sakura and Don Don Izakaya, a harbinger of the late-night karaage and Sapporo craze; served as
+                    private chef for the city’s consul general of Japan; and, for the past three years, has been chef de
+                    cuisine at Yorkville’s Kasa Moto.</p>
+                </p>
+            </div>
+            <div class="rs4img" data-aos="fade-left"><img src="../assets/images/news/yukashi.jpg"></div>
+        </div>
+        <div class="rs5">
+            <div class="rs5img" data-aos="fade-right"><img src="../assets/images/news/diff2.jpg"></div>
+            <div class="rs5info" data-aos="fade-left">
+                <h3>Arthur's Restaurant</h3>
+                <p>The first time you enter, you’ll stop dead in your tracks. There’s a lot to take in: the octagonal
+                    room, gigantic by downtown standards; the steady march of servers balancing precarious silver trays
+                    of a half-dozen martinis; the vintage
+                    playlist a-throb with the Temptations and ­Carole King; the tables of modelesque women and men who
+                    look straight out of one of those European Netflix series you’ve been bingeing; and most of all, the
+                    dramatic honeycombed ceiling sculpture
+                    that looms over the room and, though immobile, gives the impression that everything and everyone is
+                    dancing. It’s quite a scene.</p>
+                </p>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-header">
+            BESTOF</div>
+        <div class="footer-content" style="font-style:italic">
+            <div class="footer-terms col-l-2 col-xl-2">
+                <div>Categories</div>
+                <div>Gallery</div>
+                <div>News</div>
+                <div>Deals</div>
+                <div>Games</div>
+            </div>
+            <hr class="footer-line-margin-5 hide" />
+            <div class="footer-terms col-l-2 col-xl-2">
+                <div>Restaurants</div>
+                <div>Moiles</div>
+                <div>Laptops</div>
+                <div>Cities</div>
+                <div>Movies</div>
+            </div>
+            <hr class="footer-line-margin-5 hide" />
+            <div class="footer-social col-l-2 col-xl-2">
+                <span class="font-14">FOLLOW US</span>
+                <br />
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-google"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <hr class="footer-line-margin-5 hide" />
+            <div class="footer-sign-up col-l-2 col-xl-2">
+                <span class="sign-up">Sign Up</span><br />
+                <span class="sign-up-text font-14">Sign Up here to comment,<br /> rate an item and explore more
+                    about
+                    the site</span>
+            </div>
+        </div>
+        <div class="site-contact">
+            <div>&copy; Copyright 2019 BestOf</div>
+            <div>About Us | Privary Policy | Contact Us | Terms and Conditions</div>
+        </div>
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

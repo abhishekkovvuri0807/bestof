@@ -1,11 +1,13 @@
 # bestof
-URL: https://2019-fall-itc-5103-0na.github.io/bestof/
+URL: https://abhishekkovvuri0807.github.io/bestof/index.html
 
 Abhishek Kovvuri
 
    layout - created website header, left navigation and footer.
 
    Login page - to take user credentials from input fields, validate the data against the data in the user data object or local storage user object, and after successful login redirect to the home page of the application. If the login fails, respective error messages are shown.
+
+   URL: https://abhishekkovvuri0807.github.io/bestof/html/login.html
 
    Related files :
    login.html
@@ -14,6 +16,8 @@ Abhishek Kovvuri
    main.css
 
    Sign Up page - take user data from input fields and validate the entered data. If data is valid, create a user object and store in local storage for login purpose. If data is not valid, show corresponding error messages.
+
+   URL: https://abhishekkovvuri0807.github.io/bestof/html/sign-up.html
 
    Related files :
    sign-up.html
@@ -25,6 +29,8 @@ Abhishek Kovvuri
 
    Category page - shows the selected top categories. 
 
+   URL: https://abhishekkovvuri0807.github.io/bestof/index.html
+
    Related files :
    index.html
    category.js
@@ -35,7 +41,11 @@ Abhishek Kovvuri
 
    Items page - shows the top 10 items with star rating of a particular category. 
 
+   URL: https://abhishekkovvuri0807.github.io/bestof/html/items.html?categoryId=1
+
    Item page - shows the item page. The page displays item name, rating, overview, photos and reviews of a users. 
+
+   URL: https://abhishekkovvuri0807.github.io/bestof/html/item.html?categoryId=1&&itemId=1
 
    Related files :
    items.html
